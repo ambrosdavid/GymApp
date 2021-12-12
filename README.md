@@ -108,7 +108,8 @@ To get a local copy up and running follow these simple example steps.
 
 >Command list for the Flask docker container : 
 
-* In the same folder of the Dockerfile run : 
+* In the same folder of the Dockerfile run :
+
     ```
     docker build -t flask:0.1 .
     docker run -dit -p 5000:5000 flask:0.1

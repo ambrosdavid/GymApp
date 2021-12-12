@@ -30,8 +30,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#demo">Demo</a></li>
   </ol>
 </details>
@@ -67,7 +65,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Bulma](https://bulma.io/)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
-* [Docker](https://www.docker.com/) :heart_eyes:
+* [Docker](https://www.docker.com/)
 * [Docker-Compose](https://docs.docker.com/compose/)
 
 
@@ -152,31 +150,18 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 ## Demo
 
 <div id="demo"></div>
-<span><img src="images/demo.gif" alt="demo"/></span>
+<div align="center">
+    <h4> The DB diagrams look like this: </h4>
+<span><img src="schemaAoggetti.png" alt="objects" width="400"/> <img src="gifDemo.gif" alt="Relazionale" width="400"/></span>
+>
+
+<img src="images/demo.gif" alt="demo"/>
+<p>(<a href="#top">back to top</a>)</p>
+</div>
 
 
 

@@ -43,7 +43,7 @@
 ![Product Name Screen Shot][product-screenshot]
 <div align="center" ><a href="#demo">Demo</a> </div>
 
-"GymApp" is a university project related to the "Databases" course created for the purpose of managing a gym at the time of covid-19, via an online booking system, completely built from scratch.
+"GymApp" is a university project related to the "Databases" course created for the purpose of managing a gym during the covid-19 period, via an online booking system, completely built from scratch.
 
 Respectively for front-end, back-end and database the following tools have been used:
 * __Front-end:__ The Angular 13 framework was used.

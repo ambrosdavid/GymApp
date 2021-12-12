@@ -156,7 +156,7 @@ Don't forget to give the project a star! Thanks again!
 <div id="demo"></div>
 <div align="center">
     <h4> The DB diagrams look like this: </h4>
-<span><img src="schemaAoggetti.png" alt="objects" width="400"/> <img src="gifDemo.gif" alt="Relazionale" width="400"/></span>
+<span><img src="schemaAoggetti.png" alt="objects" width="400"/> <img src="Relazionale.png" alt="Relazionale" width="400"/></span>
 >
 
 <img src="images/demo.gif" alt="demo"/>

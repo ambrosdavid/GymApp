@@ -154,12 +154,17 @@ Don't forget to give the project a star! Thanks again!
 ## Demo
 
 <div id="demo"></div>
-<div align="center">
-    <h4> The DB diagrams look like this: </h4>
-<span><img src="schemaAoggetti.png" alt="objects" width="400"/> <img src="Relazionale.png" alt="Relazionale" width="400"/></span>
->
 
-<img src="images/demo.gif" alt="demo"/>
+<div align="center">
+    <h4> Object diagram:</h4>
+    <img src="images/schemaAoggetti.png" alt="schemaAoggetti"/>
+<br>
+    <h4> ER diagram:</h4>
+    <img src="images/Relazionale.PNG" alt="Relazionale"/>
+<br>
+    <h4> Gym web app:</h4>
+    <img src="images/demo.gif" alt="demo"/>
+    
 <p>(<a href="#top">back to top</a>)</p>
 </div>
 

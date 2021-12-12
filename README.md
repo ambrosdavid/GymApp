@@ -156,14 +156,15 @@ Don't forget to give the project a star! Thanks again!
 <div id="demo"></div>
 
 <div align="center">
+    <h4> Gym web app:</h4>
+    <img src="images/demo.gif" alt="demo"/>
+    <br>
     <h4> Object diagram:</h4>
     <img src="images/schemaAoggetti.png" alt="schemaAoggetti"/>
 <br>
     <h4> ER diagram:</h4>
     <img src="images/Relazionale.PNG" alt="Relazionale"/>
-<br>
-    <h4> Gym web app:</h4>
-    <img src="images/demo.gif" alt="demo"/>
+
     
 <p>(<a href="#top">back to top</a>)</p>
 </div>

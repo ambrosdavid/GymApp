@@ -1,14 +1,13 @@
-# Gym App
+
 <div id="top"></div>
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
 
-  <h3 align="center">Gym App</h3>
+  <h1 align="center">Gym App</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -58,6 +57,8 @@ Respectively for front-end, back-end and database the following tools have been 
 
 In addition, __Docker__ was used to manage containers running the processes: Flask-App (back-end) and PosgreSQL database, in isolated environments!
 
+This is a really really basic project based on a single postgreSQL database which is connected from a single flask rest-applications server which in turn communicates with the basic front-end webpage.
+The purpose of this project is also to dockerize as much as possible, in order to, after-all enable a easy blue-red pipeline for CI/CD scope.
 
 ### Built With
 
@@ -83,39 +84,66 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You should have installed Docker [here](https://docs.docker.com/get-docker/) in your local machine.
+
+And also docker-compose [here](https://docs.docker.com/compose/install/).
+
+Before proceeding with the build and run of the project be carefull on setting correctly the POSTGRES_HOST env variable inside the Dockerfile file.
+
+In order to set it correctly check your own local machine ip, and set it as you see.
+
 
 ### Installation
+After cloning this repository on your local machine:
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+<div align="center">
+    
+<h4> PostgreSQL(docker)</h4>
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Command line for the PostgreSQL docker container : 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+In the same folder of docker-compose.yml run : 
+```
+docker-compose up -d
+```
 
+To see the image and container you just created :
+```
+docker image ls
+docker ps
+```
+</div>
+
+<div align="center">
+    <h4> Flask Application(docker) </h4>
+Command list for the Flask docker container : 
+
+In the same folder of the Dockerfile run : 
+```
+    docker build -t flask:0.1 .
+    docker run -dit -p 5000:5000 flask:0.1
+    docker container logs -f {id}
+```
+</div>
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Now you can interact with the rest-application server with Postman, for example : 
+```
+curl --location --request POST 'http://127.0.0.1:5000/add' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name" : "Ivan",
+    "price" : 3000,
+    "breed" : "type"
+}'
+```
 
+```
+curl --location --request GET 'localhost:5000/'
+```
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -197,7 +225,7 @@ Use this space to list resources you find helpful and would like to give credit 
 ## Demo
 
 <div id="demo"></div>
-![Product Name Gif][product-gif]
+<span><img src="images/demo.gif" alt="demo"/></span>
 
 
 
@@ -206,4 +234,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/david-ambros-07404a174/
 [product-screenshot]: images/fe.PNG
-[product-gif]: images/demo.gif

@@ -1,9 +1,7 @@
+# Gym App
 <div id="top"></div>
 
-
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -12,8 +10,6 @@
 
   <h3 align="center">Gym App</h3>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -39,7 +35,6 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#demo">Demo</a></li>
-
   </ol>
 </details>
 
@@ -47,6 +42,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
 
 ![Product Name Screen Shot][product-screenshot]
 <a href="#demo">Demo</a>
@@ -197,9 +193,12 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
 ## Demo
+
 <div id="demo"></div>
 ![Product Name Gif][product-gif]
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

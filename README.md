@@ -24,13 +24,12 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+          <li><a href="#setup1">Setup PostgreSQL</a></li>
+          <li><a href="#setup2">Setup Flask Application</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#demo">Demo</a></li>
@@ -44,9 +43,7 @@
 
 
 ![Product Name Screen Shot][product-screenshot]
-<a href="#demo">Demo</a>
-
-
+<div align="center" ><a href="#demo">Demo</a> </div>
 
 "GymApp" is a university project related to the "Databases" course created for the purpose of managing a gym at the time of covid-19, via an online booking system, completely built from scratch.
 
@@ -70,7 +67,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Bulma](https://bulma.io/)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
-* [Docker](https://www.docker.com/)
+* [Docker](https://www.docker.com/) :heart_eyes:
 * [Docker-Compose](https://docs.docker.com/compose/)
 
 
@@ -84,47 +81,41 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-You should have installed Docker [here](https://docs.docker.com/get-docker/) in your local machine.
+1. You should have installed Docker [here](https://docs.docker.com/get-docker/) in your local machine.
 
-And also docker-compose [here](https://docs.docker.com/compose/install/).
+2. And also docker-compose [here](https://docs.docker.com/compose/install/).
 
-Before proceeding with the build and run of the project be carefull on setting correctly the POSTGRES_HOST env variable inside the Dockerfile file.
+3. Before proceeding with the build and run of the project be carefull on setting correctly the POSTGRES_HOST env variable inside the Dockerfile file.
 
-In order to set it correctly check your own local machine ip, and set it as you see.
+4. In order to set it correctly check your own local machine ip, and set it as you see.
 
 
-### Installation
-After cloning this repository on your local machine:
+### Setup PostgreSQL(docker)
+<div id="setup1"></div>
 
-<div align="center">
-    
-<h4> PostgreSQL(docker)</h4>
+>Command line for the PostgreSQL docker container : 
 
-Command line for the PostgreSQL docker container : 
+* In the same folder of docker-compose.yml run : 
+    ```sh
+    docker-compose up -d
+    ```
 
-In the same folder of docker-compose.yml run : 
-```
-docker-compose up -d
-```
+* To see the image and container you just created :
+    ```sh
+    docker image ls
+    docker ps
+    ```
+### Setup Flask Application(docker)
+<div id="setup2"></div>
 
-To see the image and container you just created :
-```
-docker image ls
-docker ps
-```
-</div>
+>Command list for the Flask docker container : 
 
-<div align="center">
-    <h4> Flask Application(docker) </h4>
-Command list for the Flask docker container : 
-
-In the same folder of the Dockerfile run : 
-```
+* In the same folder of the Dockerfile run : 
+    ```
     docker build -t flask:0.1 .
     docker run -dit -p 5000:5000 flask:0.1
     docker container logs -f {id}
-```
-</div>
+    ```
 
 
 <!-- USAGE EXAMPLES -->
@@ -146,26 +137,6 @@ curl --location --request GET 'localhost:5000/'
 ```
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -180,26 +151,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -1,8 +1,6 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -40,6 +38,8 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#demo">Demo</a></li>
+
   </ol>
 </details>
 
@@ -49,6 +49,8 @@
 ## About The Project
 
 ![Product Name Screen Shot][product-screenshot]
+<a href="#demo">Demo</a>
+
 
 
 "GymApp" is a university project related to the "Databases" course created for the purpose of managing a gym at the time of covid-19, via an online booking system, completely built from scratch.
@@ -195,16 +197,14 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Demo
+<div id="demo"></div>
+![Product Name Gif][product-gif]
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/ambrosdavid/GymApp/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/ambrosdavid/GymApp/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/ambrosdavid/GymApp/stargazers
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/david-ambros-07404a174/
 [product-screenshot]: images/fe.PNG
+[product-gif]: images/demo.gif

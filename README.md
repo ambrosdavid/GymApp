@@ -132,7 +132,7 @@ curl --location --request POST 'http://127.0.0.1:5000/add' \
 ```
 curl --location --request GET 'localhost:5000/'
 ```
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the (work in progress) [Documentation](https://github.com/ambrosdavid/GymApp/blob/main/Work%20in%20Progress%20DOCUMENTATION.pdf)_
 
 
 <!-- CONTRIBUTING -->

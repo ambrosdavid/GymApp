@@ -42,6 +42,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 <div align="center" ><a href="#demo">Demo</a> </div>
+[Documentation](https://github.com/ambrosdavid/GymApp/blob/main/Italian%20Documentation.pdf)_ (WIP)
 
 "GymApp" is a university project related to the "Databases" course created for the purpose of managing a gym during the covid-19 period, via an online booking system, completely built from scratch.
 
@@ -132,7 +133,7 @@ curl --location --request POST 'http://127.0.0.1:5000/add' \
 ```
 curl --location --request GET 'localhost:5000/'
 ```
-_For more examples, please refer to the (work in progress) [Documentation](https://github.com/ambrosdavid/GymApp/blob/main/Work%20in%20Progress%20DOCUMENTATION.pdf)_
+_For more examples, please refer to the (work in progress) [Documentation](https://github.com/ambrosdavid/GymApp/blob/main/Italian%20Documentation.pdf)_
 
 
 <!-- CONTRIBUTING -->

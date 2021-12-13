@@ -164,10 +164,10 @@ Don't forget to give the project a star! Thanks again!
     <img src="images/demo.gif" alt="demo"/>
     <br>
     <h4> Object diagram:</h4>
-    <img src="images/schemaAoggetti.png" alt="schemaAoggetti"/>
+    <img src="images/schemaAoggetti.png" style= "width:80%" alt="schemaAoggetti"/>
 <br>
     <h4> ER diagram:</h4>
-    <img src="images/Relazionale.PNG" alt="Relazionale"/>
+    <img src="images/Relazionale.PNG" style= "width:80%" alt="Relazionale"/>
 
     
 <p>(<a href="#top">back to top</a>)</p>

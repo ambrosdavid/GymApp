@@ -41,8 +41,12 @@
 
 
 ![Product Name Screen Shot][product-screenshot]
-<div align="center" ><a href="#demo">Demo</a> </div>
-[Documentation](https://github.com/ambrosdavid/GymApp/blob/main/Italian%20Documentation.pdf)_ (WIP)
+<div align="center">
+    <a href="#demo">Demo</a> 
+    <br>
+    <a href="https://github.com/ambrosdavid/GymApp/blob/main/Italian%20Documentation.pdf">WIP italian full Documentation</a>
+</div>
+
 
 "GymApp" is a university project related to the "Databases" course created for the purpose of managing a gym during the covid-19 period, via an online booking system, completely built from scratch.
 

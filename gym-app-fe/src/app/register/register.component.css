@@ -1,0 +1,28 @@
+section{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(248, 70, 120,0.8);
+}
+
+.centred{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field button {
+  margin: 10px;
+}
+
+input-field {
+  margin: 4px;
+}

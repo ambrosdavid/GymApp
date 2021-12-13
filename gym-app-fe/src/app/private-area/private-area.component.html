@@ -1,0 +1,150 @@
+<p>
+  Me :
+  {{me | json}}
+</p>
+
+
+<div class="horizontal-container">
+  <div>
+    <div class="card" style="width:400px; margin: 20px">
+      <div class="card-image" style="text-align: center">
+        <figure class="image is-4by3">
+          <img [src]="imageToShow" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+
+          </div>
+          <div class="media-content">
+            <p class="title is-4">{{me.name}} {{me.surname}}</p>
+            <p class="subtitle is-6">{{me.email}}</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <time>{{getToday()}}</time>
+
+          <ul>
+            <li>
+              <strong>ROLE ID : <a>@{{me.role}}</a></strong>
+            </li>
+            <li>
+              <strong>FISCAL ID : {{me.fiscal_code}}</strong>
+            </li>
+            <li>
+              <strong>PHONE : {{me.phone}}</strong>
+            </li>
+            <li>
+              <strong>BIRTH DATE :
+                {{getFormattedBirthDate()}}
+              </strong>
+            </li>
+          </ul>
+
+        </div>
+
+        <div *ngIf="showEditPanel">
+          <input-field
+            [(field)]="meUpdate.birth_date"
+            inputType="date"
+            inputPlaceHolder="22/01/2001"
+            label="Date of birth"
+            [icon]="icons.basic"
+          >
+          </input-field>
+
+          <input-field
+            [(field)]="meUpdate.fiscal_code"
+            inputType="text"
+            inputPlaceHolder="SBNFRN0029092HDI"
+            label="Fiscal id"
+            [icon]="icons.basic"
+          >
+          </input-field>
+
+          <input-field
+            [(field)]="meUpdate.phone"
+            inputType="text"
+            inputPlaceHolder="+39 2732563823"
+            label="Phone number"
+            [icon]="icons.basic"
+          >
+          </input-field>
+
+          <input type="file" name="profile" (change)="onFileSelect($event)" />
+
+        </div>
+
+        <div class="bigButton">
+          <button [ngClass]="this.showEditPanel ? 'button is-danger' :'button is-warning'"
+                  (click)="this.flipEditPanel()" style="text-align:center; margin-top: 5px; ">
+            {{this.showEditPanel ? "Submit Edit" : "Edit profile"}}
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="accesses column">
+      <h3 style="font-family: 'quartz'">Reservations</h3>
+      <ul class="block-list is-small">
+        <li class="box" *ngFor="let sub of subscriptions">
+          Date: <span class="mY">{{sub.date}}</span>
+            <br>
+            type: <span class="mY">{{sub.reservation_type}}</span>
+            <br>
+            time: <span class="mY">{{sub.time}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="this.me.role=='admin'" class="accesses column">
+    <div >
+      <h3 style="font-family: 'quartz'">All Users :</h3>
+      <li class="box" *ngFor="let user of this.allUsers">
+        Birth Date: <span class="mY">{{user.birth_date}}</span>
+        <br>
+        Email: <span class="mY">{{user.email}}</span>
+        <br>
+        Name: <span class="mY">{{user.name}}</span>
+        <br>
+        Role: <span class="mY">{{user.role}}</span>
+        <br>
+        Surname: <span class="mY">{{user.surname}}</span>
+    </div>
+    </div>
+
+    <div class ="accesses column">
+      <h3 style="font-family: 'quartz'">Accesses</h3>
+      <ul class="block-list is-small">
+        <li class="box" *ngFor="let access of accesses">
+          Date: <span class="mY">{{access.date}}</span>
+          <br>
+          Entrance: <span class="mY">{{access.time_entrance}}</span>
+          <br>
+          exit: <span class="mY">{{access.time_exit}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="accesses column">
+      <h3 style="font-family: 'quartz'">Policy</h3>
+      <ul class="block-list is-small">
+        <li class="box" *ngFor="let p of policy">
+          From: <span class="mY">{{p.valid_from}}</span>
+          <br>
+          To: <span class="mY">{{p.valid_to}}</span>
+          <br>
+          Description: <span class="mY">{{p.description}}</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,91 @@
+
+<div class="container">
+  <article class="message mB">
+    <div class="message-header">
+      Add Slot
+      <button class="delete is-large" (click)="closeScreen()">Close</button>
+    </div>
+    <div class="message-body">
+      <div class="field">
+      <div class="control ">
+        <input-field
+          [(field)]="body.title"
+          inputType="text"
+          inputPlaceHolder="Title"
+          label="Title"
+          [icon]="icons.basic"
+        >
+        </input-field>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control ">
+        <input-field
+          [(field)]="body.description"
+          inputType="text"
+          inputPlaceHolder="Description"
+          label="Description"
+          [icon]="icons.basic"
+        >
+        </input-field>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control ">
+        <input-field
+          [(field)]="body.date"
+          inputType="date"
+          inputPlaceHolder="22/01/2001"
+          label="When"
+          [icon]="icons.basic"
+        >
+        </input-field>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control ">
+        <input-field
+          [(field)]="body.time_from"
+          inputType="time"
+          inputPlaceHolder="10:00:100"
+          label="From"
+          [icon]="icons.basic"
+        >
+        </input-field>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control ">
+        <input-field
+          [(field)]="body.time_to"
+          inputType="time"
+          inputPlaceHolder="10:00:100"
+          label="To"
+          [icon]="icons.basic"
+        >
+        </input-field>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control ">
+        <input-field
+          [(field)]="body.max_capacity"
+          inputType="number"
+          inputPlaceHolder="80"
+          label="Capacity"
+        >
+        </input-field>
+      </div>
+    </div>
+      <button class="button is-success" (click)="saveSlot()">
+        <span>Save</span>
+      </button>
+    </div>
+  </article>
+</div>
+<!--date = db.Column("date", db.Date)
+time_from = db.Column("time_from", db.Time)
+time_to = db.Column("time_to", db.Time)
+max_capacity = db.Column("max_capacity", db.Integer, CheckConstraint("max_capacity > 0"), default=20)
+title = db.Column("title", db.String(40))
+description = db.Column("description", db.String(150))-->

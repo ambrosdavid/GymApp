@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: quartz;
+  src: url(assets/font/Typograph/TYPOGRAPH.otf) format("opentype");
+}
+
+.mY{
+  text-color: #ffdd03;
+  color: #ffdd03;
+}
+
+.mB{
+  background-color: #33414f;
+  color: #fff;
+  border-radius: 4px;
+  position: relative;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+}

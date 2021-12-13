@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{data.date}}</h1>
+<div mat-dialog-content>
+  Message from backend:
+  <ul>
+    {{data.lessons | json}}
+  </ul>
+</div>
+
+<ngx-timeline-acracode [events]="events">
+  <ng-template let-event let-index="rowIndex" timelineBody>
+    {{event.body.description}}
+    <br>
+    <button *ngIf="(data.user.role=='customer' || data.user.role=='admin') && isntAlreadySubscribed(event.body.lesson) && event.body.lesson && event.body.lesson.current_reservations < event.body.lesson.max_participants" (click)="makeLessonReservation(event.body.lesson.id)" class="button is-warning">Subscribe</button>
+  </ng-template>
+</ngx-timeline-acracode>

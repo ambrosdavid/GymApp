@@ -1,0 +1,56 @@
+<div class="container">
+  <article class="message mB">
+    <div class="message-header">
+      Add Lesson
+      <button class="delete is-large" (click)="closeScreen()">Close</button>
+    </div>
+    <div class="message-body">
+      <div class="field">
+        <div class="control ">
+          <input-field
+            [(field)]="body.date"
+            inputType="date"
+            inputPlaceHolder="22/01/2001"
+            label="When"
+            [icon]="icons.basic"
+          >
+          </input-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control ">
+          <input-field
+            [(field)]="body.time"
+            inputType="time"
+            inputPlaceHolder="10:00:100"
+            label="From"
+            [icon]="icons.basic"
+          >
+          </input-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input-field
+            [(field)]="body.max_participants"
+            inputType="number"
+            inputPlaceHolder="80"
+            label="Capacity"
+          >
+          </input-field>
+        </div>
+      </div>
+      <div class="field">
+        <div class="select">
+          <select [ngModel]="selectedCourse"
+                  (ngModelChange)="onSelectCourse($event)">
+            <option [ngValue]="course.id" *ngFor="let course of courses">{{course.name}}</option>
+          </select>
+        </div>
+      </div>
+      <button class="button is-success" (click)="saveLesson()">
+        <span>Save</span>
+      </button>
+    </div>
+  </article>
+</div>

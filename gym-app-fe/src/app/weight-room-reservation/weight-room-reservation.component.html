@@ -1,0 +1,83 @@
+
+<div class="container is-fluid">
+  <div class="mB">
+    Your are logged as role: {{me.role}}, name: {{me.name}}, email: {{me.email}}
+    <br>
+    <button (click)="wantAddSlot=true" *ngIf="me.role=='manager' || me.role=='admin'" class="button inputButton">Add new Slot</button>
+    <div style="width: 40%" class="center">
+      <app-slot-detail  *ngIf="wantAddSlot" (wantScreen)="closeAddSlot($event)"></app-slot-detail>
+    </div>
+
+    <button (click)="wantAddLesson=true" *ngIf="me.role=='trainer' || me.role=='admin'" class="button inputButton">Add new Lesson</button>
+    <div style="width: 40%" class="center">
+      <app-lesson-reservation  *ngIf="wantAddLesson" (wantScreen)="closeAddLesson($event)"></app-lesson-reservation>
+    </div>
+
+    <div>
+      <div class="checks">
+      <label class="checkbox">
+        <input type="checkbox" [defaultChecked]="seeSlots"  [checked]="seeSlots" (change)="seeSlots = !seeSlots">
+        See Slots
+      </label>
+      <br>
+      <label class="checkbox">
+        <input type="checkbox" [defaultChecked]="seeLessons" [checked]="seeLessons" (change)="seeLessons = !seeLessons">
+        See Lessons
+      </label>
+      </div>
+
+      <div class="buttons" style="padding: 10px">
+        <div class="signs">
+          <input type="button" (click)="decreaseMonth()" value="-" />
+          <input type="button" (click)="increaseMonth()" value="+" />
+        </div>
+
+        <input class="inputButton" type="button" (click)="setCurrentMonth()" value="TODAY" />
+      </div>
+    </div>
+
+    <div style="text-align: center; font-weight: bold; font-size: 40px; margin: 30px">
+      {{displayMonth}}
+    </div>
+
+    <table class='calendar-table' *ngIf="calendar">
+      <thead>
+      <tr>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let week of calendar | chunk: 7; let i = index">
+        <td
+          class="calendar-day"
+            [ngClass]="{'past-date': day.isPastDate, 'today': day.isToday}"
+            *ngFor="let day of week; let j = index">
+          <strong>{{day.date.getDate()}}</strong>
+          <strong *ngIf="day.isToday || (i==0 && j==0) || (day.date.getDate() == 1)"> {{monthNames[day.date.getMonth()]}}</strong>
+          <div class="calendar-day-header" [ngClass]="{'blue-date': day.isToday}">
+            <ng-container *ngIf="seeSlots">
+              <div class="mB" style="font-size: 12px" *ngFor="let slot of this.getSlotsOf(day.date)" (click)="this.showSlotsOf(day.date)">
+                {{slot.time_from}} - {{slot.time_to}}
+              </div>
+            </ng-container>
+
+            <ng-container *ngIf="seeLessons">
+              <div class="mC" style="font-size: 12px" *ngFor="let lesson of this.getLessonsOf(day.date)" (click)="this.showLessonsOfDay(day.date)">
+                {{lesson.time}} - {{lesson.course}}
+              </div>
+            </ng-container>
+
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

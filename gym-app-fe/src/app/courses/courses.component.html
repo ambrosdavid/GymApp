@@ -1,0 +1,121 @@
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child mB">
+          <p class="title">CYBEROBICS</p>
+          <p class="subtitle">The newest course you cand find ever!</p>
+          <figure class="image">
+            <img src="../../assets/imgs/cb.jpg">
+          </figure>
+        </article>
+        <article class="tile is-child mB">
+          <p class="title">CROSSFIT</p>
+          <p class="subtitle">Our best course!</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="mB tile is-child mB" >
+          <p class="title">Energy is for Everyone</p>
+          <p class="subtitle">Believe in the power of a motivating group fitness community.</p>
+          <figure class="image is-4by3">
+            <img src="../../assets/imgs/bg1.jpg">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child mB">
+        <p class="title">Yoga</p>
+        <p class="subtitle mY">Time to stretch!</p>
+        <div class="content">
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child mB">
+      <div class="content">
+        <p class="title">Goals are Made to be Crushed</p>
+        <p class="subtitle">Train with our experts to drive your results.</p>
+        <div class="content">
+          <figure class="image" >
+            <img src="../../assets/imgs/Crossfit2.jpeg">
+          </figure>
+          <p class="subtitle" style="font-size: x-large">Do you want to lose weight, shape your body, get fitter or just switch off? Experience the full variety and always find the right LIVE Class in the CYERBOBICS app or from one of our partners.
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div class="tile is-parent">
+  <article class="tile is-child">
+    <p class="title">OUR CURRENT COURSES</p>
+    <p class="subtitle mY">Check out our current available curses and subscribe!</p>
+    <div class="content">
+      <button (click)="changeState()" *ngIf="me.role=='trainer' || me.role=='admin'" class="button inputButton">Add new Course</button>
+      <div [@heightGrow]="state" style="width: 40%" class="center">
+        <div *ngIf="wantAddCourse">
+          <div class="container">
+            <article class="message mB">
+              <div class="message-header">
+                Add Course
+                <button class="delete is-large" (click)="changeState()">Close</button>
+              </div>
+              <div class="message-body">
+                <div class="field">
+                  <div class="control ">
+                    <input-field
+                      [(field)]="body.name"
+                      inputType="text"
+                      inputPlaceHolder="Title"
+                      label="Title"
+                      [icon]="icons.basic"
+                    >
+                    </input-field>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control ">
+                    <input-field
+                      [(field)]="body.description"
+                      inputType="text"
+                      inputPlaceHolder="Description"
+                      label="Description"
+                      [icon]="icons.basic"
+                    >
+                    </input-field>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="select">
+                    <select [ngModel]="selectedTrainer"
+                            (ngModelChange)="onSelectTrainer($event)">
+                      <option [ngValue]="trainer.id" *ngFor="let trainer of trainers">{{trainer.name}} - {{trainer.surname}}</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="button is-success" (click)="addCourse()">
+                  <span>Save</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+<div>
+  <div *ngFor="let c of courses" class="tile is-horizontal" style="padding-bottom: 20px">
+    <article class="tile is-child mB">
+      <p class="title">{{c.name}}</p>
+      <p class="subtitle mY">{{c.description}}</p>
+      <div class="content">
+      </div>
+    </article>
+  </div>
+</div>
+

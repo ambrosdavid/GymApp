@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{data.date}}</h1>
+<div mat-dialog-content>
+  Message from backend:
+  <ul>
+    {{data.slots | json}}
+  </ul>
+</div>
+
+<ngx-timeline-acracode [events]="events">
+  <ng-template let-event let-index="rowIndex" timelineBody>
+    {{event.body.description}}
+    <br>
+     <button *ngIf="(data.user.role=='customer' || data.user.role=='admin') && isntAlreadySubscribed(event.body.slot) && event.body.slot && event.body.slot.current_reservations < event.body.slot.max_capacity" (click)="makeSlotReservation(event.body.slot.id)" class="button is-warning">Subscribe</button>
+  </ng-template>
+ </ngx-timeline-acracode>
+
+ <!--<ngx-timeline [itens]="list"></ngx-timeline>-->
+

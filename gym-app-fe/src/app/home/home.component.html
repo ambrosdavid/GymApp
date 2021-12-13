@@ -1,0 +1,38 @@
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<header>
+  <div class="bg" style="height: 200px"></div>
+</header>
+<div class="page">
+    <section class="section">
+        <h1 class="mY" style="text-align: center;font-family: 'quartz'; font-size: 100px; margin-bottom: 50px " >Zyzz Gym</h1>
+        <h2   style="color: white;text-align: center;" >
+          The  <strong style="color: white;">GYM</strong> of your dreams!
+        </h2>
+        <div class="buttonsArea">
+          <button (click)="wantLogin=true"><span>Login</span></button>
+          <button (click)="wantRegister=true"><span>Register</span></button>
+          <button (click)="this.areaPersonale()"><span>Area Personale</span></button>
+        </div>
+        <app-login [(user)]="me" [(wantScreen)]="wantLogin" *ngIf="wantLogin"></app-login>
+
+        <app-register
+          [(user)]="me" *ngIf="wantRegister"
+          [(wantScreen)]="wantRegister"
+        ></app-register>
+    </section>
+
+  <div class="container is-fluid">
+    <div class="notification">
+      <app-courses></app-courses>
+    </div>
+  </div>
+  <div style="height: 120px">
+    <h1 class="mY" style="text-align: center;font-family: 'quartz'; font-size: 100px; margin-top: 50px" >
+      START TRAINING RIGHT NOW!
+    </h1>
+  </div>
+  <app-weight-room-reservation></app-weight-room-reservation>
+  <br>
+</div>
+
+

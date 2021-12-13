@@ -1,0 +1,50 @@
+<section class="hero is-fullheight" style="z-index: 3; background-color: rgba(136,136,136,0.76)">
+  <div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column box is-5-tablet is-4-desktop is-max-widescreen">
+
+            <div>
+              <button (click)="this.closeScreen()" class="button" style="float: right;">
+                Go Back
+              </button>
+              <h1 class="title">Login</h1>
+              <h2 class="subtitle">Be careful</h2>
+            </div>
+
+
+            <input-field
+              [(field)]="user.email"
+              inputType="email"
+              inputPlaceHolder="flo@gmail.com"
+              label="Email"
+              [icon]="icons.email"
+            >
+            </input-field>
+
+
+            <input-field
+              [(field)]="user.password"
+              inputType="password"
+              inputPlaceHolder="*********"
+              label="Password"
+              [icon]="icons.pwd"
+            >
+            </input-field>
+
+            <div class="field">
+              <button (click)="this.loginUser()" class="button" style="text-content: center">
+                Login
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+

@@ -1,0 +1,75 @@
+.horizontal-container{
+  display:flex;
+}
+.zoomed-map{
+  flex-grow:1;
+}
+
+.bigButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input-field {
+  margin: 10px;
+}
+
+.accesses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  width: 300px;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 10px;
+  float: left;
+}
+
+.accesses h3 {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #33414f;
+  color: #f3e6e8;
+  border-radius: 50px;
+}
+
+.accesses ul {
+  position: relative;
+  padding: unset;
+  margin: 0;
+  width: 100%;
+}
+
+.box {
+  list-style: none;
+  padding: 15px 40px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.1);
+  position: relative;
+  background: #a9a9a9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: rgba(192, 83, 0, 0.56);
+  color: #fff;
+}
+
+.box i {
+  color: #33414f;
+}
+
+.box:hover i {
+  color: #fff;
+}
+
+*{
+  font-family: quartz;
+}
+
